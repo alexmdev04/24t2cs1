@@ -6,4 +6,4 @@ A captain without a crew. Lost to the cruel, rippling tides of the sea. So now i
 - **Target PEGI Rating** = 12+ - Mild Fantasy Violence, 
 - **Story** = You are the only survivor of your crew with only your ship as your friend. As The Lone Captain, you must set sail to reach safety but what awaits you on the sea is unknown.
 
-[itch.io](xae0.itch.io/thelonecaptain) | 24T2 SAE Institute Project (5FSC0XE101)
+[itch.io](https://xae0.itch.io/thelonecaptain?secret=v0NlzokFVMLr2Pt2J8TX9Ph5gdE) | 24T2 SAE Institute Project (5FSC0XE101)
