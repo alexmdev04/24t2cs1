@@ -4,9 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "Components/SceneComponent.h"
-#include "DayNightCycle.generated.h"
 #include <cstdlib>
-
+#include "DayNightCycle.generated.h"
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class THELONECAPTAIN_API UDayNightCycle : public USceneComponent
@@ -24,7 +23,12 @@ protected:
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+	UPROPERTY(VisibleAnywhere)
 	float currentSunAngle; // can be between 0 and 359 (270 is center, 180-359 = Day, 0-179 = Night)
-	float startingSunAngle = 195f;
-	float cycleMultiplier	
+	UPROPERTY(VisibleAnywhere)
+	float startingSunAngle = 0.0f;
+	UPROPERTY(EditAnywhere)
+	bool enableDaylightCycle = true;
+	UPROPERTY(EditAnywhere)
+	float cycleLengthSeconds = 10.0f;
 };
