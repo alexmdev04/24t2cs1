@@ -10,11 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b94327af-ce7e-4a3a-902d-01e4f5e4eced" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheLoneCaptain/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/World/BP_GlobalFunctions.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/World/BP_GlobalFunctions.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/TheLoneCaptain/Private/TreasureArea.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/TheLoneCaptain/Private/TreasureArea.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/TheLoneCaptain/TheLoneCaptain.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/TheLoneCaptain/TheLoneCaptain.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/TheLoneCaptain/TheLoneCaptain.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/TheLoneCaptain/TheLoneCaptain.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheLoneCaptain/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheLoneCaptain/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/World/World.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/World/World.umap" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +164,7 @@
       <updated>1718148051551</updated>
       <workItem from="1718148053125" duration="741000" />
       <workItem from="1718148814745" duration="1101000" />
-      <workItem from="1718198281495" duration="2930000" />
+      <workItem from="1718198281495" duration="4636000" />
     </task>
     <servers />
   </component>
