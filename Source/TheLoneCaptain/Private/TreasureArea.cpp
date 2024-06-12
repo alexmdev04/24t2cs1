@@ -31,7 +31,6 @@ void ATreasureArea::BeginPlay()
 {
 	Super::BeginPlay();
 	treasureAreaCollider->OnComponentBeginOverlap.AddDynamic(this, &ATreasureArea::OverlapBegin);
-	//globalFunctions::DebugLog(TEXT("Hello Global C++"), FColor::White);
 	GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::White, TEXT("Hello C++"));
 }
 
@@ -41,19 +40,17 @@ void ATreasureArea::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 }
 
-void ATreasureArea::OverlapBegin(UPrimitiveComponent* overlappedComponent, AActor* OtherActor,
-	UPrimitiveComponent* OtherComponent, int32 otherBodyIndex, bool bFromSweep, const FHitResult& sweepResult)
+void ATreasureArea::OverlapBegin(UPrimitiveComponent* overlappedComponent, AActor* otherActor, UPrimitiveComponent* otherComponent, int32 otherBodyIndex, bool bFromSweep, const FHitResult& sweepResult)
 {
-	GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::White, TEXT("Actor entered treasure zone Hello C++"));
-	if (OtherActor->Tags.Contains(TEXT("treasure")))
+	if (otherActor->Tags.Contains(FName("treasure")))
 	{
-		overlappedComponent->SetPhysicsLinearVelocity(FVector(0.0f,0.0f,0.0f));
-		OtherActor->SetActorLocation(FVector(0.0f, 0.0f, 2110.0f), false, nullptr, ETeleportType::TeleportPhysics);
-		OtherActor->SetActorRotation(FRotator(0.0f,0.0f,0.0f));
-		GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::White, TEXT("treasure collected!: Hello C++"));
+		otherComponent->SetPhysicsLinearVelocity(FVector(0.0f,0.0f,0.0f));
+		otherActor->SetActorLocation(FVector(0.0f, 0.0f, 2110.0f), false, nullptr, ETeleportType::TeleportPhysics);
+		otherActor->SetActorRotation(FRotator(0.0f,0.0f,0.0f));
+		GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::White, TEXT("treasure collected!"));
 	}
 	else
 	{
-		UE_LOG(LogTemp, Display, TEXT("non-treasure Actor entered treasure zone: %s Hello C++"), *OtherActor->GetName());
+		GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::White, FString("non-treasure Actor entered treasure zone: ") + *otherActor->GetName());
 	}
 }
