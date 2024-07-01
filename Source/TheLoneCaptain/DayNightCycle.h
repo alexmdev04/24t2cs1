@@ -4,8 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "Components/SceneComponent.h"
-#include "DayNightCycle.generated.h"
 #include <cstdlib>
+#include "DayNightCycle.generated.h"
 
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
@@ -25,6 +25,6 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 	float currentSunAngle; // can be between 0 and 359 (270 is center, 180-359 = Day, 0-179 = Night)
-	float startingSunAngle = 195f;
-	float cycleMultiplier	
+	float startingSunAngle = 195.0f;
+	float cycleMultiplier;
 };
