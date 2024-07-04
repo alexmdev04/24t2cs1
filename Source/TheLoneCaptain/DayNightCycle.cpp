@@ -28,6 +28,7 @@ void UDayNightCycle::BeginPlay()
 void UDayNightCycle::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+	if (!enableDaylightCycle) return;
 	UDayNightCycle::currentSunAngle += DeltaTime;
 	this->GetOwner()->SetActorRotation(FRotator(currentSunAngle,0.0f,0.0f).Quaternion()); 
 }

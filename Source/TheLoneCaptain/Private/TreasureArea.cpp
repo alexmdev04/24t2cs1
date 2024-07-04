@@ -15,8 +15,7 @@ ATreasureArea::ATreasureArea()
 	debugBox = CreateDefaultSubobject<UStaticMeshComponent>(FName("debugBox"));
 	debugBox->SetupAttachment(treasureAreaCollider);
 	debugBox->SetWorldScale3D(UE::Math::TVector<double>(2.0f, 2.0f, 0.5f));
-	//debugBox->GetComponentTransform().TransformPosition(UE::Math::TVector<double>(0.0f,0.0f,-25.0f));
-	debugBox->GetRelativeTransform().SetLocation(UE::Math::TVector<double>(0.0f,0.0f,-25.0f));
+	debugBox->SetRelativeLocation(UE::Math::TVector<double>(0.0f,0.0f,-25.0f));
 	debugBox->SetCollisionProfileName(TEXT("NoCollision"));
 	debugBox->SetGenerateOverlapEvents(false);
 	
