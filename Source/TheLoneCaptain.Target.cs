@@ -9,7 +9,7 @@ public class TheLoneCaptainTarget : TargetRules
 	{
 		Type = TargetType.Game;
 		DefaultBuildSettings = BuildSettingsVersion.V4;
-
 		ExtraModuleNames.AddRange( new string[] { "TheLoneCaptain" } );
+		IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_3;
 	}
 }
